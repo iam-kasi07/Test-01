@@ -8,10 +8,17 @@ jobs:
         steps: 
             - name: checkout repo
               uses: actions/checkout@v4
-              
-            - name: welcome message
-              run: echo "my forst github action job"
-            - name: list files
-              run: ls
-            - name: read file
-              run: cat f1
+
+            - name: List and Read Files
+              run:  |
+                   echo "my forst github action job"
+                   ls -ltra
+                   cat f1
+            - name: Generate ASCII Artwork
+              run: cowsay -f dragon "Run for cover, I am a DRAGON...RAWR" >> dragon.txt
+
+           # - name: list files
+           #   run: ls
+
+           #  - name: read file
+           #   run: cat f1
